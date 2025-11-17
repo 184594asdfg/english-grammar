@@ -1,0 +1,31 @@
+/* 微信小程序全局样式修复 - 简化版本 */
+
+/* 章节展开功能 - 使用微信小程序条件渲染 */
+.chapter-container {
+  position: relative;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.08);
+}
+
+/* 简化展开图标动画 */
+.expand-arrow {
+  transition: transform 0.3s ease;
+}
+
+.expand-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+/* 微信小程序性能优化 */
+.chapter-header {
+  position: relative;
+  z-index: 10;
+}
+
+.lesson-item {
+  will-change: transform;
+  backface-visibility: hidden;
+}
