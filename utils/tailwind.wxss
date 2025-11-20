@@ -1,0 +1,173 @@
+/* utils/tailwind.wxss - 类似Tailwind的工具类系统 */
+
+/* ===== 颜色系统 ===== */
+/* 主色调 */
+.look-color { color: #10B981; }
+.see-color { color: #F59E0B; }
+.watch-color { color: #3B82F6; }
+
+/* 背景色 */
+.bg-look-10 { background-color: rgba(16, 185, 129, 0.1); }
+.bg-see-10 { background-color: rgba(245, 158, 11, 0.1); }
+.bg-watch-10 { background-color: rgba(59, 130, 246, 0.1); }
+
+.bg-look-5 { background-color: rgba(16, 185, 129, 0.05); }
+.bg-see-5 { background-color: rgba(245, 158, 11, 0.05); }
+.bg-watch-5 { background-color: rgba(59, 130, 246, 0.05); }
+
+/* 高亮文本 */
+.highlight-look {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+    padding: 2rpx 8rpx;
+    border-radius: 8rpx;
+    font-weight: 500;
+}
+
+.highlight-see {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+    padding: 2rpx 8rpx;
+    border-radius: 8rpx;
+    font-weight: 500;
+}
+
+.highlight-watch {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+    padding: 2rpx 8rpx;
+    border-radius: 8rpx;
+    font-weight: 500;
+}
+
+/* ===== 布局工具 ===== */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+/* ===== 间距系统 ===== */
+.m-1 { margin: 4rpx; }
+.m-2 { margin: 8rpx; }
+.m-3 { margin: 12rpx; }
+.m-4 { margin: 16rpx; }
+
+.mb-1 { margin-bottom: 4rpx; }
+.mb-2 { margin-bottom: 8rpx; }
+.mb-3 { margin-bottom: 12rpx; }
+.mb-4 { margin-bottom: 16rpx; }
+.mb-6 { margin-bottom: 24rpx; }
+.mb-8 { margin-bottom: 32rpx; }
+
+.mr-1 { margin-right: 4rpx; }
+.mr-2 { margin-right: 8rpx; }
+.mr-3 { margin-right: 12rpx; }
+
+.p-1 { padding: 4rpx; }
+.p-2 { padding: 8rpx; }
+.p-3 { padding: 12rpx; }
+.p-4 { padding: 16rpx; }
+
+.px-2 { padding-left: 8rpx; padding-right: 8rpx; }
+.px-4 { padding-left: 16rpx; padding-right: 16rpx; }
+.py-1 { padding-top: 4rpx; padding-bottom: 4rpx; }
+.py-2 { padding-top: 8rpx; padding-bottom: 8rpx; }
+
+/* ===== 边框和圆角 ===== */
+.rounded { border-radius: 8rpx; }
+.rounded-lg { border-radius: 12rpx; }
+.rounded-xl { border-radius: 16rpx; }
+.rounded-full { border-radius: 9999rpx; }
+
+.border-t-4-look { border-top: 4rpx solid #10B981; }
+.border-t-4-see { border-top: 4rpx solid #F59E0B; }
+.border-t-4-watch { border-top: 4rpx solid #3B82F6; }
+
+/* ===== 阴影 ===== */
+.shadow { 
+    box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1); 
+}
+.shadow-lg { 
+    box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.15); 
+}
+
+/* ===== 文本样式 ===== */
+.text-xs { font-size: 24rpx; }
+.text-sm { font-size: 28rpx; }
+.text-base { font-size: 32rpx; }
+.text-lg { font-size: 36rpx; }
+.text-xl { font-size: 40rpx; }
+
+.font-medium { font-weight: 500; }
+.font-bold { font-weight: 700; }
+
+.text-gray-600 { color: #6B7280; }
+.text-gray-700 { color: #374151; }
+.text-gray-800 { color: #1F2937; }
+
+/* ===== 标签样式 ===== */
+.tag-look {
+    display: inline-block;
+    padding: 8rpx 16rpx;
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+    font-size: 24rpx;
+    border-radius: 9999rpx;
+}
+
+.tag-see {
+    display: inline-block;
+    padding: 8rpx 16rpx;
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #F59E0B;
+    font-size: 24rpx;
+    border-radius: 9999rpx;
+}
+
+.tag-watch {
+    display: inline-block;
+    padding: 8rpx 16rpx;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3B82F6;
+    font-size: 24rpx;
+    border-radius: 9999rpx;
+}
+
+/* ===== 网格布局 ===== */
+.grid { display: grid; }
+.gap-2 { gap: 8rpx; }
+.gap-4 { gap: 16rpx; }
+
+/* ===== 交互效果 ===== */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:active {
+    transform: translateY(-4rpx);
+    box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.15);
+}
+
+/* ===== 响应式工具 ===== */
+.mobile-zoom {
+    touch-action: manipulation;
+}
+
+/* 手机端优化 */
+@media screen and (max-width: 750rpx) {
+    .verb-card {
+        padding: 32rpx !important;
+    }
+    
+    .example-text {
+        font-size: 28rpx;
+    }
+    
+    .btn-option {
+        padding: 24rpx 32rpx !important;
+        font-size: 32rpx !important;
+        flex: 1;
+        min-width: 200rpx;
+    }
+}

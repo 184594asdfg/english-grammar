@@ -1,167 +1,159 @@
-<!-- 英语语法速通pro - 首页 -->
+<!-- 英语语法速通 - 现代化设计首页 -->
 <view class="container">
-  <!-- 顶部横幅区域 -->
-  <view class="header-banner">
-    <view class="banner-content">
-      <!-- 装饰徽章 -->
-      <view class="decoration-badges">
-        <view class="badge badge-1">⭐</view>
-        <view class="badge badge-2">🏆</view>
-        <view class="badge badge-3">📚</view>
-      </view>
-      
-      <!-- 标题区域 -->
-      <view class="app-title">
-        <text class="title-main">英语语法</text>
-        <text class="title-sub">速通</text>
-        <text class="title-pro">Pro</text>
-      </view>
-      <view class="title-decoration"></view>
-      
-      <!-- 副标题 -->
-      <view class="app-subtitle">
-        <text class="subtitle-text">口诀记忆法，语法秒懂</text>
-      </view>
-      
-      <!-- 简洁进度条 -->
-      <view class="simple-progress">
-        <view class="progress-header">
-          <text class="grade-label">{{currentGrade}}进度</text>
-          <view class="progress-meta">
-            <text class="study-days-mini">📅 {{studyDays}}天</text>
-            <text class="progress-text">{{progressPercentage}}%</text>
-          </view>
-        </view>
-        <view class="progress-bar-simple">
-          <view class="progress-fill-simple" style="width: {{progressPercentage}}%"></view>
-        </view>
-        <view class="progress-info">
-          <text class="progress-detail">{{completedPoints}}/{{totalPoints}} 知识点</text>
-          <view class="next-topic-simple">
-            <text class="next-label-simple">下一个：</text>
-            <text class="next-content-simple">{{nextTopic}}</text>
-          </view>
+  <!-- 顶部英雄区域 -->
+  <view class="hero-section">
+    <view class="hero-content">
+      <view class="hero-title-wrapper">
+        <text class="hero-title">英语语法速通</text>
+        <view class="hero-badge">
+          <text class="badge-text">PRO</text>
         </view>
       </view>
-    </view>
-  </view>
-
-  <!-- 主要分类区域 -->
-  <view class="main-categories">
-    <view class="category-row">
-      <view class="category-item junior" bindtap="switchGrade" data-grade="junior">
-         <view class="item-icon">🏫</view>
-         <view class="item-text">
-           <text class="item-title">初中</text>
-           <text class="item-desc">基础语法速通</text>
-           <text class="item-progress">{{gradeData.junior.completed}}/{{gradeData.junior.total}}</text>
-         </view>
-         <view class="grade-switch-tip">点击切换</view>
-       </view>
-      
-      <view class="category-item senior" bindtap="switchGrade" data-grade="senior">
-         <view class="item-icon">📖</view>
-         <view class="item-text">
-           <text class="item-title">高中</text>
-           <text class="item-desc">进阶语法速通</text>
-           <text class="item-progress">{{gradeData.senior.completed}}/{{gradeData.senior.total}}</text>
-         </view>
-         <view class="grade-switch-tip">点击切换</view>
-       </view>
-      
-      <view class="category-item university" bindtap="switchGrade" data-grade="university">
-         <view class="item-icon">🎓</view>
-         <view class="item-text">
-           <text class="item-title">大学</text>
-           <text class="item-desc">高级语法速通</text>
-           <text class="item-progress">{{gradeData.university.completed}}/{{gradeData.university.total}}</text>
-         </view>
-         <view class="grade-switch-tip">点击切换</view>
-       </view>
-    </view>
-  </view>
-
-  <!-- 今日学习推荐 -->
-  <view class="daily-recommend">
-    <view class="recommend-header">
-      <text class="recommend-title">📚 今日学习推荐</text>
-      <text class="recommend-date">{{currentDate}}</text>
-    </view>
-    
-    <view class="recommend-content">
-      <view class="recommend-item" bindtap="startTodayLesson">
-        <view class="item-icon">📝</view>
-        <view class="item-info">
-          <text class="item-title">今日语法点</text>
-          <text class="item-desc">{{todayGrammar}}</text>
-        </view>
-        <view class="item-action">
-          <text class="action-text">学习</text>
-        </view>
-      </view>
-      
-      <view class="recommend-item" bindtap="startQuickPractice">
-        <view class="item-icon">✨</view>
-        <view class="item-info">
-          <text class="item-title">快速练习</text>
-          <text class="item-desc">5分钟巩固练习</text>
-        </view>
-        <view class="item-action">
-          <text class="action-text">练习</text>
-        </view>
-      </view>
-      
-      <view class="recommend-item" bindtap="reviewYesterday">
-        <view class="item-icon">🔄</view>
-        <view class="item-info">
-          <text class="item-title">复习昨日</text>
-          <text class="item-desc">巩固已学知识</text>
-        </view>
-        <view class="item-action">
-          <text class="action-text">复习</text>
-        </view>
+      <view class="hero-tags">
+        <view class="hero-tag">个性化学习</view>
+        <view class="hero-tag">AI推荐</view>
+        <view class="hero-tag">进度跟踪</view>
+        <view class="hero-tag">专业解析</view>
       </view>
     </view>
     
-    <view class="recommend-tip">
-      <text class="tip-icon">💡</text>
-      <text class="tip-text">每天进步一点点，语法其实很简单！</text>
-    </view>
+    <!-- 装饰性背景元素 -->
+    <view class="hero-bg-element element-1"></view>
+    <view class="hero-bg-element element-2"></view>
+    <view class="hero-bg-element element-3"></view>
   </view>
 
-  <!-- 学习工具快捷入口 -->
-  <view class="tools-section">
-    <view class="tool-item" bindtap="openGrammarCheck">
-      <text class="tool-icon">🔍</text>
-      <text class="tool-title">语法检查</text>
-    </view>
-    <view class="tool-item" bindtap="openNoteBook">
-      <text class="tool-icon">📝</text>
-      <text class="tool-title">错题本</text>
-    </view>
-    <view class="tool-item" bindtap="openPractice">
-      <text class="tool-icon">✏️</text>
-      <text class="tool-title">专项练习</text>
-    </view>
-    <view class="tool-item" bindtap="openAnalysis">
-      <text class="tool-icon">📊</text>
-      <text class="tool-title">学习分析</text>
-    </view>
-  </view>
+  <!-- 主要内容区域 -->
+  <view class="main-content">
 
-  <!-- 快速统计区域 -->
-  <view class="stats-section">
-    <view class="stat-item">
-      <text class="stat-number">50+</text>
-      <text class="stat-label">语法口诀</text>
+    <!-- 专项学习模块 -->
+    <view class="special-section">
+      <view class="section-header">
+        <view class="section-title-wrapper">
+          <view class="section-icon">✨</view>
+          <text class="section-title">易混淆词专项学习</text>
+        </view>
+        <text class="section-subtitle">按学段精准学习，告别混淆困扰</text>
+      </view>
+      
+      <view class="special-cards">
+        <view class="special-card junior" bindtap="onConfusionTap" data-level="junior">
+          <view class="card-header">
+            <view class="card-icon">🌱</view>
+            <text class="card-title">初中阶段</text>
+          </view>
+          <text class="card-desc">8个核心混淆点</text>
+          <view class="progress-section">
+            <view class="progress-bar">
+              <view class="progress-fill" style="width: 60%"></view>
+            </view>
+            <text class="progress-text">60% 已学习</text>
+          </view>
+        </view>
+        
+        <view class="special-card senior" bindtap="onConfusionTap" data-level="senior">
+          <view class="card-header">
+            <view class="card-icon">🌿</view>
+            <text class="card-title">高中阶段</text>
+          </view>
+          <text class="card-desc">12个进阶混淆点</text>
+          <view class="progress-section">
+            <view class="progress-bar">
+              <view class="progress-fill" style="width: 40%"></view>
+            </view>
+            <text class="progress-text">40% 已学习</text>
+          </view>
+        </view>
+        
+        <view class="special-card college" bindtap="onConfusionTap" data-level="college">
+          <view class="card-header">
+            <view class="card-icon">🌳</view>
+            <text class="card-title">大学阶段</text>
+          </view>
+          <text class="card-desc">10个专业混淆点</text>
+          <view class="progress-section">
+            <view class="progress-bar">
+              <view class="progress-fill" style="width: 20%"></view>
+            </view>
+            <text class="progress-text">20% 已学习</text>
+          </view>
+        </view>
+      </view>
     </view>
-    <view class="stat-item">
-      <text class="stat-number">10000+</text>
-      <text class="stat-label">学生使用</text>
+
+    <!-- 功能导航 -->
+    <view class="navigation-section">
+      <text class="section-title">核心功能</text>
+      
+      <view class="nav-grid">
+        <view class="nav-item" bindtap="openGrammar">
+          <view class="nav-icon">📚</view>
+          <text class="nav-label">语法学习</text>
+        </view>
+        
+        <view class="nav-item" bindtap="openPractice">
+          <view class="nav-icon">🧪</view>
+          <text class="nav-label">练习测试</text>
+        </view>
+        
+        <view class="nav-item" bindtap="openCollection">
+          <view class="nav-icon">⭐</view>
+          <text class="nav-label">收藏夹</text>
+        </view>
+        
+        <view class="nav-item" bindtap="openSettings">
+          <view class="nav-icon">⚙️</view>
+          <text class="nav-label">设置</text>
+        </view>
+      </view>
     </view>
-    <view class="stat-item">
-      <text class="stat-number">98%</text>
-      <text class="stat-label">好评率</text>
+
+    <!-- 今日推荐 -->
+    <view class="recommend-section">
+      <view class="section-header">
+        <text class="section-title">今日推荐</text>
+        <text class="section-more" bindtap="viewAllRecommend">更多</text>
+      </view>
+      
+      <view class="recommend-cards">
+        <view class="recommend-card" bindtap="openTenseTopic">
+          <view class="rec-icon">⏰</view>
+          <view class="rec-content">
+            <text class="rec-title">时态专题</text>
+            <text class="rec-desc">掌握英语时态用法</text>
+          </view>
+        </view>
+        
+        <view class="recommend-card" bindtap="openWritingTips">
+          <view class="rec-icon">✍️</view>
+          <view class="rec-content">
+            <text class="rec-title">写作技巧</text>
+            <text class="rec-desc">提升英语写作能力</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 学习统计 -->
+    <view class="stats-section">
+      <text class="section-title">学习统计</text>
+      
+      <view class="stats-cards">
+        <view class="stat-card">
+          <text class="stat-value">{{studyDays}}</text>
+          <text class="stat-label">学习天数</text>
+        </view>
+        
+        <view class="stat-card">
+          <text class="stat-value">{{completedPoints}}</text>
+          <text class="stat-label">掌握知识点</text>
+        </view>
+        
+        <view class="stat-card">
+          <text class="stat-value">{{currentLevel}}</text>
+          <text class="stat-label">当前等级</text>
+        </view>
+      </view>
     </view>
   </view>
 </view>

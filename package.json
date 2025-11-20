@@ -1,0 +1,20 @@
+{
+  "name": "english-grammar",
+  "version": "1.0.0",
+  "description": "英语语法速通小程序",
+  "main": "app.js",
+  "scripts": {
+    "dev": "echo '请在微信开发者工具中打开项目进行预览'",
+    "build": "echo '请在微信开发者工具中构建项目'",
+    "lint": "eslint . --ext .js"
+  },
+  "keywords": ["小程序", "英语", "语法"],
+  "author": "English Grammar Team",
+  "license": "MIT",
+  "dependencies": {
+    "miniprogram-api-typings": "^3.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "初中混淆词列表",
+  "navigationBarBackgroundColor": "#667eea",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#f8f9fa",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": false
+}

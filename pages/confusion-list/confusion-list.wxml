@@ -1,0 +1,44 @@
+<!-- 混淆词列表页面 -->
+<view class="container">
+  <!-- 页面头部 -->
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">
+      <text class="back-icon">←</text>
+      <text class="back-text">返回</text>
+    </view>
+    <text class="page-title">{{pageTitle}}</text>
+  </view>
+
+  <!-- 学习进度 -->
+  <view class="progress-section">
+    <view class="progress-info">
+      <text class="progress-label">学习进度</text>
+      <text class="progress-value">{{progress}}%</text>
+    </view>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{progress}}%"></view>
+    </view>
+  </view>
+
+  <!-- 混淆词列表 -->
+  <view class="confusion-list">
+    <view class="list-title">
+      <text class="title-text">{{confusionList.length}}个核心混淆点</text>
+      <text class="title-desc">点击开始学习</text>
+    </view>
+    
+    <view class="confusion-items">
+      <view class="confusion-item" wx:for="{{confusionList}}" wx:key="id" bindtap="openConfusionDetail" data-id="{{item.id}}" data-title="{{item.title}}">
+        <view class="item-header">
+          <view class="item-icon">📚</view>
+          <text class="item-title">{{item.title}}</text>
+          <view class="item-status">
+            <text class="status-text">{{item.status}}</text>
+            <view class="status-icon">{{item.status === '已学习' ? '✓' : item.status === '学习中' ? '●' : '○'}}</view>
+          </view>
+        </view>
+        <text class="item-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+</view>
